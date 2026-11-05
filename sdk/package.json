@@ -23,7 +23,7 @@
   },
   "scripts": {
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
-    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "build": "node init && npm run clean && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run",
     "test:watch": "vitest",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "ajv": "^8.17.1",
     "typescript": "^5.6.0",
     "vitest": "^3.0.5"
   }
